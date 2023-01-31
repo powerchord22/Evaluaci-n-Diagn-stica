@@ -24,6 +24,8 @@ const countProducts = document.querySelector('#contador-productos');
 const cartEmpty = document.querySelector('.cart-empty');
 const cartTotal = document.querySelector('.cart-total');
 
+
+
 productsList.addEventListener('click', e => {
 	if (e.target.classList.contains('btn-add-cart')) {
 		const product = e.target.parentElement;
@@ -92,7 +94,8 @@ const showHTML = () => {
 	allProducts.forEach(product => {
 		const containerProduct = document.createElement('div');
 		containerProduct.classList.add('cart-product');
-
+       
+		//  template string 
 		containerProduct.innerHTML = `
             <div class="info-cart-product">
                 <span class="cantidad-producto-carrito">${product.quantity}</span>
@@ -125,3 +128,20 @@ const showHTML = () => {
 	valorTotal.innerText = `$${total}`;
 	countProducts.innerText = totalOfProducts;
 };
+
+// FORMULARIO
+
+function Login(){ 
+	var done=0; 
+	var usuario=document.login.usuario.value; 
+	var password=document.login.password.value; 
+	if (usuario=="USUARIO" && password=="1234") { 
+	window.location="index.html"; 
+	} 
+	if (usuario=="USUARIO2" && password=="12345") { 
+	window.location="./index.html"; 
+	} 
+	if (usuario=="" && password=="") { 
+	window.location="errorpopup.html"; 
+	} 
+	} 
